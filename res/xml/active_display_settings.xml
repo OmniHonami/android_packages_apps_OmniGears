@@ -127,6 +127,7 @@
             android:summary="@string/ad_brightness_summary"
             android:max="100"
             settings:min="0"
+            settings:interval="1"
             settings:unitsLeft=""
             settings:unitsRight="%"
             android:defaultValue="100"
