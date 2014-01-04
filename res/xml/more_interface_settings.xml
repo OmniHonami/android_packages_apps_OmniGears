@@ -20,6 +20,11 @@
         android:title="@string/interface_more_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceScreen
+        android:key="interface_voice_tts"
+        android:fragment="org.omnirom.omnigears.interfacesettings.TtsNotification"
+        android:title="@string/voice_tts_title" />
+
     <!-- Recents panel -->
     <PreferenceCategory
             android:key="category_recent_panel"
