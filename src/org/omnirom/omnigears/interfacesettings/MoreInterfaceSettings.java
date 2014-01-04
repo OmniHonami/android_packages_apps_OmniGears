@@ -120,6 +120,7 @@ public class MoreInterfaceSettings extends SettingsPreferenceFragment implements
             startActivity(INTENT_OMNISWITCH_SETTINGS);
             return true;
         }
+        
         // If we didn't handle it, let preferences handle it.
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
