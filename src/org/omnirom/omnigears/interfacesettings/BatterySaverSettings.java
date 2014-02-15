@@ -214,7 +214,7 @@ public class BatterySaverSettings extends SettingsPreferenceFragment implements
         mInitialBrightness.setOnPreferenceChangeListener(this);
 
         try {
-            if (Settings.System.getInt(resolver,
+            if (Settings.System.getInt(mResolver,
                     Settings.System.SCREEN_BRIGHTNESS_MODE) == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC) {
                 mSmartBrightnessEnabled.setEnabled(false);
                 mSmartBrightnessEnabled.setSummary(R.string.status_bar_toggle_info);
