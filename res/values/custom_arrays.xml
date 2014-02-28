@@ -541,6 +541,7 @@
         <item>60000</item>
         <item>120000</item>
         <item>300000</item>
+    </string-array>
 
     <!-- Network Traffic Display States -->
     <string-array name="show_network_traffic_state_entries" translatable="false">
