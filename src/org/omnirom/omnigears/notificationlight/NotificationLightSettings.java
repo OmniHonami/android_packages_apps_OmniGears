@@ -78,7 +78,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private static final String NOTIFICATION_LIGHT_PULSE_VMAIL_COLOR = "notification_light_pulse_vmail_color";
     private static final String NOTIFICATION_LIGHT_PULSE_VMAIL_LED_ON = "notification_light_pulse_vmail_led_on";
     private static final String NOTIFICATION_LIGHT_PULSE_VMAIL_LED_OFF = "notification_light_pulse_vmail_led_off";
-    private static final String KEY_SCREEN_ON_NOTIFICATION_LED = "screen_on_notification_led";
+    private static final String NOTIFICAIION_LIGHT_SCREEN_ON = "notification_light_screen_on";
     private static final String PULSE_PREF = "pulse_enabled";
     private static final String DEFAULT_PREF = "default";
     private static final String CUSTOM_PREF = "custom_enabled";
@@ -134,10 +134,9 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         mDefaultPref = (ApplicationLightPreference) findPreference(DEFAULT_PREF);
         mDefaultPref.setOnPreferenceChangeListener(this);
 
-        mScreenOnNotificationLed = (CheckBoxPreference) findPreference(KEY_SCREEN_ON_NOTIFICATION_LED);
-        int screenOnNotificationLed = Settings.System.getInt(getContentResolver(),
-                Settings.System.SCREEN_ON_NOTIFICATION_LED, 0);
-        mScreenOnNotificationLed.setChecked(screenOnNotificationLed == 1);
+        mScreenOnNotificationLed = (CheckBoxPreference) findPreference(NOTIFICAIION_LIGHT_SCREEN_ON);
+        mScreenOnNotificationLed.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.SCREEN_ON_NOTIFICATION_LED, 0) == 1);
         mScreenOnNotificationLed.setOnPreferenceChangeListener(this);
 
         // Missed call and Voicemail preferences should only show on devices with a voice capabilities
